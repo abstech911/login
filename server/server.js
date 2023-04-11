@@ -9,8 +9,8 @@ const app = express();
 /** Middlewares */
 app.use(express.json());
 app.use(cors());
-app.use(morgan('tiny'));
-app.disable('x-powered-by');
+app.use(morgan('dev'));
+// app.disable('x-powered-by');
 
 
 const port = 8080;

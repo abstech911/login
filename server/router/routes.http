@@ -1,4 +1,69 @@
 POST http://localhost:8080/api/register
+Content-Type: application/json
+
+{
+  "username" : "admin1234",
+  "password" : "value",
+  "email" : "valueh"
+}
+###
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "username" : "valueh",
+  "password" : "value"
+}
+
+###
+POST http://localhost:8080/api/authenticate
+Content-Type: application/json
+
+{
+  "username" : "valueh"
+}
 
 ###
 
+GET http://localhost:8080/api/user/valueh
+
+###
+
+PUT http://localhost:8080/api/updateuser?id=64315591bffd218dae631bcf
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDMxNmJiMmNkMTNmZDY1OWY4Mjg3NzUiLCJ1c2VybmFtZSI6InZhbHVlaCIsImlhdCI6MTY4MDk2MDQzOCwiZXhwIjoxNjgxMDQ2ODM4fQ.Ln4P3ZFHJZQ3f4QM-LuRip6UhgZIAKr76Hn5GnCOrUg
+
+{
+"email": "ghost@3.com"
+}
+
+###
+GET http://localhost:8080/api/generateOTP?username=valueh
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDMxNzk2MGUxZGUwZGM4MTE1NDRlOTMiLCJ1c2VybmFtZSI6InZhbHVlaCIsImlhdCI6MTY4MDk2Mzk0NSwiZXhwIjoxNjgxMDUwMzQ1fQ.qaVKzBlhA1jseuK9zy-YNWY6X1BWPk381B2XpijEB0o
+
+###
+GET http://localhost:8080/api/verifyOTP?username=valueh&code=435402
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDMxNzk2MGUxZGUwZGM4MTE1NDRlOTMiLCJ1c2VybmFtZSI6InZhbHVlaCIsImlhdCI6MTY4MDk2Mzk0NSwiZXhwIjoxNjgxMDUwMzQ1fQ.qaVKzBlhA1jseuK9zy-YNWY6X1BWPk381B2XpijEB0o
+
+###
+
+PUT http://localhost:8080/api/resetPassword
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDMxNmJiMmNkMTNmZDY1OWY4Mjg3NzUiLCJ1c2VybmFtZSI6InZhbHVlaCIsImlhdCI6MTY4MDk2MDQzOCwiZXhwIjoxNjgxMDQ2ODM4fQ.Ln4P3ZFHJZQ3f4QM-LuRip6UhgZIAKr76Hn5GnCOrUg
+
+{
+  "username" : "valueh",
+  "password" : "value55"
+}
+
+###
+
+POST http://localhost:8080/api/registerMail
+Content-Type: application/json
+
+{
+"username" : "value",
+"userEmail" : "siroo6620@gmail.com",
+"text" : "value",
+"subject" : "value"
+}
